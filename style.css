@@ -18,6 +18,7 @@ body{
 .pw-container{
     background-color: rgb(58, 13, 102);
     width: 400px;
+    box-shadow:0 4px 10px rgb(0, 0, 0, 0.5);
 }
 
 .pw-header{
@@ -54,12 +55,28 @@ body{
 }
 
 .pw-body{
-    padding: 1rem;
+    padding: 0 1rem 1rem;
+
 }
 
 .form-control{
+    color: #eee;
     display: flex;
     justify-content: space-between;
     margin: 0.5rem 0;
     
+}
+
+.generate{
+    background-color: #ecb602;
+    border: none;
+    color: rebeccapurple;
+    display: block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+
+
 }
