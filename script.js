@@ -15,6 +15,10 @@ const symbol = '~!@#$%^&()_+:"?><{}-=';
 function getUpperCase(params) {
     return upperLetters
     [Math.floor(Math.random() * upperLetters.length)];
+    /**Math.random alwys returns numbers below 1 so it used with
+     * Math.random to return random integers, the syntax is given below
+     * Math.floor(Math.random * 10) returns numbers from 0 to 9 
+     */
 }
 
 function getLowerCase(params) {
@@ -31,4 +35,40 @@ function getSymbols(params) {
     [Math.floor(Math.random() * symbol.length)];
 }
 
-alert(getNumbers())
+function generatePassword(params) {
+   const len = lengthEl.value; 
+    let password = '';
+
+
+    for (let i = 0; i < len; i++) {
+        const x = generateX();
+        password += x;
+        
+    }
+
+    pwEl.innerText = password;
+}
+
+function generateX(){
+    const xs = [];
+    if (upperEl.checked) {
+        xs.push(getUpperCase());
+    }
+
+    if (lowerEl.checked) {
+        xs.push(getLowerCase());
+    }
+
+    if (numberEl.checked) {
+        xs.push(getNumbers());
+    }
+
+    if (symbolEl.checked) {
+        xs.push(getSymbols());
+    }
+
+    if(xs.length == 0) return "";
+    return xs[Math.floor(Math.random() * xs.length)];
+}
+
+generateEl.addEventListener('click', generatePassword)
