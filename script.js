@@ -15,14 +15,12 @@ const symbol = '~!@#$%^&()_+:"?><{}-=';
 function getUpperCase(params) {
     return upperLetters
     [Math.floor(Math.random() * upperLetters.length)];
-    /**Math.random alwys returns numbers below 1 so it used with
-     * Math.random to return random integers, the syntax is given below
-     * Math.floor(Math.random * 10) returns numbers from 0 to 9 
-     */
+    
 }
 
 function getLowerCase(params) {
-    return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
+    return lowerLetters
+    [Math.floor(Math.random() * lowerLetters.length)];
 }
 
 function getNumbers(params) {
@@ -71,4 +69,4 @@ function generateX(){
     return xs[Math.floor(Math.random() * xs.length)];
 }
 
-generateEl.addEventListener('click', generatePassword)
+generateEl.addEventListener('click', generatePassword);
