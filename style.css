@@ -17,7 +17,7 @@ body{
 
 .pw-container{
     background-color: rgb(58, 13, 102);
-    width: 400px;
+    min-width: 400px;/*allows container to stretch pass 400px*/
     box-shadow:0 4px 10px rgb(0, 0, 0, 0.5);
 }
 
@@ -78,6 +78,6 @@ body{
     padding: 0.5rem;
     margin-top: 1rem;
     width: 100%;
-
+    cursor: pointer;
 
 }
